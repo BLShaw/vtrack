@@ -15,6 +15,9 @@ vtrack is a computer vision application that processes video footage to detect, 
 - Video output with bounding boxes, IDs, and counts
 - Configurable counting lines and detection parameters
 
+## Demo
+https://github.com/user-attachments/assets/d506c380-c96d-4e52-9c9a-b918d12d4671
+
 ## Installation
 
 1. Clone the repository:
