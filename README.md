@@ -88,3 +88,4 @@ VTrack/
 - **Ultralytics YOLOv8** for state-of-the-art detection.
 - **SORT Algorithm** by Alex Bewley for robust tracking.
 - **Pydantic** for configuration excellence.
+- **OpenCV** and **cvzone** for computer vision utilities.
