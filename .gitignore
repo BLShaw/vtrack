@@ -24,29 +24,13 @@ wheels/
 venv/
 env/
 ENV/
-env.bak/
-venv.bak/
+.env
 
-# IDE-specific
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
-
-# Jupyter notebooks
-.ipynb_checkpoints/
-.ipynb_checkpoints/**
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
 # Project specific
 *.mp4
@@ -55,28 +39,22 @@ Thumbs.db
 *.mkv
 result.mp4
 *.log
-*.tmp
-*.temp
 
-# Model files (large files that shouldn't be versioned)
+# Model files
 *.pt
 *.pth
 *.onnx
 *.engine
 
-# Environment specific
-.env
-*.local
-
-# Testing
+# Testing & Quality
+tests/
 .pytest_cache/
 .coverage
 htmlcov/
 .cov-report
+test_*.py
+.ipynb_checkpoints/
 
-# Distribution / packaging
-*.egg
-*.egg-info/
- MANIFEST
-dist/
-build/
+# OS
+.DS_Store
+Thumbs.db

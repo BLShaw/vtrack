@@ -14,7 +14,8 @@ tqdm
 filterpy
 scikit-image
 lap
-customtkinter
+pydantic
+pytest
 #PIL
 #imageTK
 #authtoken

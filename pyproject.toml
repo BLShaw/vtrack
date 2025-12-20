@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vtrack"
+version = "1.0.0"
+description = "Industrial-grade Vehicle Tracking and Counting System"
+dependencies = [
+    "ultralytics",
+    "opencv-python",
+    "cvzone",
+    "pydantic",
+    "pyyaml",
+    "filterpy",
+    "scikit-image",
+    "lap",
+    "numpy",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
