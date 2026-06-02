@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 class ModelConfig(BaseModel):
     name: str
     fallback: str
+    confidence_threshold: float = 0.5
 
 class VideoConfig(BaseModel):
     source: str

@@ -25,6 +25,7 @@ venv/
 env/
 ENV/
 .env
+.venv/
 
 # IDEs
 .vscode/
@@ -34,6 +35,7 @@ ENV/
 
 # Project specific
 *.mp4
+!assets/trafficcam.mp4
 *.avi
 *.mov
 *.mkv
@@ -47,12 +49,10 @@ result.mp4
 *.engine
 
 # Testing & Quality
-tests/
 .pytest_cache/
 .coverage
 htmlcov/
 .cov-report
-test_*.py
 .ipynb_checkpoints/
 
 # OS

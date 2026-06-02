@@ -130,7 +130,7 @@ def main():
             else:
                 frame_region = frame
 
-            detections = detect_vehicles(model, frame_region, class_names, target_classes)
+            detections = detect_vehicles(model, frame_region, class_names, target_classes, config.model.confidence_threshold)
 
             if frame_graphics is not None:
                 frame = cvzone.overlayPNG(frame, frame_graphics, (0,0))

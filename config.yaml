@@ -1,5 +1,5 @@
 video:
-  source: "assets/traffic_cam.mp4"
+  source: "assets/trafficcam.mp4"
   mask: "assets/mask.png"
   output: "result.mp4"
 
@@ -8,7 +8,7 @@ assets:
   graphics_vehicle: "assets/graphics1.png"
 
 model:
-  name: "yolov8l.pt"
+  name: "yolov8n.pt"
   fallback: "yolov8n.pt"
   confidence_threshold: 0.5
   
@@ -18,8 +18,8 @@ tracker:
   iou_threshold: 0.3
 
 counting_lines:
-  up: [180, 410, 640, 410]
-  down: [680, 400, 1280, 450]
+  up: [680, 410, 1280, 410]
+  down: [0, 410, 640, 410]
 
 detection:
   target_classes: ["car", "truck", "bus", "motorbike"]

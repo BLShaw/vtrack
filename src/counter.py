@@ -50,21 +50,21 @@ class VehicleCounter:
         l1_end = (self.line_up[2], self.line_up[3])
         
         if self._intersect(p1, p2, l1_start, l1_end):
+            if id not in self.count_up:
+                self.count_up.append(id)
+                logger.debug(f"Vehicle {id} crossed UP line")
             if id not in self.total_count:
                 self.total_count.append(id)
-                if id not in self.count_up:
-                    self.count_up.append(id)
-                    logger.debug(f"Vehicle {id} crossed UP line")
 
         l2_start = (self.line_down[0], self.line_down[1])
         l2_end = (self.line_down[2], self.line_down[3])
 
         if self._intersect(p1, p2, l2_start, l2_end):
-             if id not in self.total_count:
+            if id not in self.count_down:
+                self.count_down.append(id)
+                logger.debug(f"Vehicle {id} crossed DOWN line")
+            if id not in self.total_count:
                 self.total_count.append(id)
-                if id not in self.count_down:
-                    self.count_down.append(id)
-                    logger.debug(f"Vehicle {id} crossed DOWN line")
         
         self.previous_positions[id] = (cx, cy)
 

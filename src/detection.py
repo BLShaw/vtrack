@@ -21,11 +21,12 @@ def detect_vehicles(
     model: YOLO, 
     frame: np.ndarray, 
     class_names: Dict[int, str], 
-    target_classes: List[str]
+    target_classes: List[str],
+    confidence_threshold: float = 0.5
 ) -> np.ndarray:
     """Detect vehicles in a frame using the YOLO model."""
     result = model(frame, stream=True)
-    detections = np.empty((0, 5))
+    detections_list = []
     
     for r in result:
         boxes = r.boxes
@@ -39,8 +40,9 @@ def detect_vehicles(
             cls = int(box.cls[0])
             vehicle_names = class_names.get(cls, "unknown")
 
-            if vehicle_names in target_classes:
-                current_detection = np.array([x1, y1, x2, y2, conf])
-                detections = np.vstack((detections, current_detection))
+            if vehicle_names in target_classes and conf >= confidence_threshold:
+                detections_list.append([x1, y1, x2, y2, conf])
     
-    return detections
+    if detections_list:
+        return np.array(detections_list)
+    return np.empty((0, 5))

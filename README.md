@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/d506c380-c96d-4e52-9c9a-b918d12d4671
 
 ### Local Execution
 ```bash
-python main.py --video assets/traffic_cam.mp4 --no-display
+python main.py --video assets/trafficcam.mp4 --no-display
 ```
 
 ### Google Colab / Notebook
@@ -47,7 +47,9 @@ Simply run `python main.py`. The system will automatically switch to inline imag
 ### CLI Arguments
 - `--config`: Path to configuration file (default: `config.yaml`).
 - `--video`: Override input video path.
+- `--mask`: Override mask image path.
 - `--output`: Override output video path.
+- `--model`: Override YOLO model path (e.g., `yolov8n.pt`).
 - `--no-display`: Disable real-time video window.
 - `--verbose`: Enable DEBUG level logging.
 - `--max-frames`: Limit processing to N frames (useful for testing).
